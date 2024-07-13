@@ -3,6 +3,7 @@ import cors from '@fastify/cors'
 import { createTrip } from './routes/create-trip'
 import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
 import { confirmTrip } from './routes/confirm-trip'
+import { confirmParticipant } from './routes/confirm-participant'
 
 const app = fastify()
 
@@ -18,8 +19,10 @@ app.setSerializerCompiler(serializerCompiler)
 
 // rota de criação
 app.register(createTrip)
-// rota de confirmação
+// rota de confirmação viagem
 app.register(confirmTrip)
+// rota de confirmação de participante
+app.register(confirmParticipant)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server running!!!');
