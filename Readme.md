@@ -1,3 +1,5 @@
 # NLW Journey - trilha de Node.JS
 
-- criação de uma api em node que gerencia planos de viagens.
+- Criação de uma api em node que gerencia planos de viagens.
+- Utilizando:
+  -  
