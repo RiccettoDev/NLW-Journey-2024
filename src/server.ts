@@ -8,6 +8,7 @@ import { createActivity } from './routes/create-activity'
 import { getActivities } from './routes/get-activities'
 import { createLink } from './routes/create-link'
 import { getLinks } from './routes/get-links'
+import { getParticipants } from './routes/get-participants'
 
 const app = fastify()
 
@@ -35,6 +36,8 @@ app.register(getActivities)
 app.register(createLink)
 // rota de listagem dos links
 app.register(getLinks)
+// rota que lista os participantes
+app.register(getParticipants)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server running!!!');
