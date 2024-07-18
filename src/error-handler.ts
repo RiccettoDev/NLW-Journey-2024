@@ -1,4 +1,4 @@
-import { FastifyInstance } from "fastify"
+import type { FastifyInstance } from "fastify"
 import { ClientError } from "./errors/client-error"
 import { ZodError } from "zod"
 
